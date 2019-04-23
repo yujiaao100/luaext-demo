@@ -59,12 +59,12 @@ function split(s, delim)
         if not pos then
           break
         end
-
+    
         table.insert (t, string.sub (s, start, pos - 1))
         start = pos + string.len (delim)
     end
     table.insert (t, string.sub (s, start))
-
+    
     return t
 end
 table.concat 打印数组：
@@ -82,7 +82,7 @@ function print_lua_table (lua_table, indent)
         print_func(tostring(lua_table))
         return
     end
-
+    
     indent = indent or 0
     for k, v in pairs(lua_table) do
         if type(k) == "string" then
@@ -222,3 +222,9 @@ for (;;) {
         break;
     }
     set2(L, i, j);
+
+
+
+--待实现功能
+
+函数switch（） 传入一个表 设置default 选项
